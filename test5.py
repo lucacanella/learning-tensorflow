@@ -55,6 +55,8 @@ Y = [
 
 #crea la sessione
 with tf.Session() as session:
+    #tensorboard --logdir=./xor
+    writer = tf.summary.FileWriter("xor", session.graph)
     session.run(init) # esegui il nodo di inizializzazione
     # esegui i cicli di training
     for i in range(100000):
