@@ -30,7 +30,7 @@ outputl = tf.sigmoid(tf.matmul(layer1, weights2) + bias2)
 cost = tf.reduce_mean((y - outputl) ** 2)
 
 decay_global_step = tf.Variable(0, trainable=False)
-decaying_learning_rate = tf.train.exponential_decay(learning_rate=0.52, global_step=decay_global_step, decay_steps=3000, decay_rate=0.95, staircase=True)
+decaying_learning_rate = tf.train.exponential_decay(learning_rate=0.55, global_step=decay_global_step, decay_steps=3500, decay_rate=0.95, staircase=True)
 
 # crea l'ottimizzatore a discesa del gradiente:
 #   assegna rateo d'apprendimento 0.1
